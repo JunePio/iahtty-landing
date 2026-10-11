@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>아이아띠 | iOS 앱 & 웹사이트 개발</title>
 <meta name="description" content="아이아띠 - iOS 앱, 웹사이트, 업무자동화 프로그램, 게임 개발. 10만원부터 시작하는 합리적인 개발 서비스.">
-<meta name="keywords" content="iOS 앱 개발, 웹사이트 제작, 업무자동화, ,게임 제작, 외주, 아이아띠, iAhtti, 앱 개발 외주, 홈페이지 제작, 포즈픽, possepik">
+<meta name="keywords" content="iOS 앱 개발, 웹사이트 제작, 업무자동화, 게임 제작, 외주, 아이아띠, iAhtti, 앱 개발 외주, 홈페이지 제작, 포즈픽, possepik, 루미오, lumio, 플래시카드 앱">
 <meta name="author" content="아이아띠 (iAtti)">
 <meta name="theme-color" content="#3D5AFE">
 
@@ -703,6 +703,143 @@ section { padding: 100px 24px; }
   transform: perspective(800px) rotateY(0deg);
 }
 
+.portfolio-phone-stage {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Lumio Theme */
+.lumio-screen {
+  background: radial-gradient(ellipse at 50% 25%, #2a1f14 0%, #16120e 65%, #0c0a09 100%) !important;
+  border: 1px solid rgba(232, 163, 23, 0.25);
+  box-shadow: inset 0 0 45px rgba(232, 163, 23, 0.12);
+}
+
+.lumio-screen .phone-app-icon {
+  background: rgba(232, 163, 23, 0.18);
+  border: 1px solid rgba(232, 163, 23, 0.45);
+  color: #f5d078;
+  box-shadow: 0 0 25px rgba(232, 163, 23, 0.35);
+  font-size: 2.1rem;
+}
+
+.lumio-screen .phone-app-name {
+  color: #f5f0ea;
+  letter-spacing: -0.02em;
+}
+
+.lumio-screen .phone-app-desc {
+  color: #b8a99a;
+}
+
+/* Apple Watch Mockup */
+.watch-mockup {
+  position: absolute;
+  right: -32px;
+  bottom: 24px;
+  width: 116px;
+  height: 148px;
+  background: #1c1c1f;
+  border-radius: 28px;
+  padding: 8px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.08);
+  border: 2px solid #2d2d34;
+  transform: perspective(800px) rotateY(-8deg) rotateX(2deg);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 3;
+}
+
+.watch-mockup:hover {
+  transform: perspective(800px) rotateY(0deg) scale(1.06);
+}
+
+.watch-crown {
+  position: absolute;
+  right: -5px;
+  top: 32px;
+  width: 5px;
+  height: 18px;
+  background: linear-gradient(180deg, #444, #222, #444);
+  border-radius: 2px;
+}
+
+.watch-screen {
+  width: 100%;
+  height: 100%;
+  background: #0c0a09;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8px;
+  border: 1px solid rgba(232, 163, 23, 0.25);
+  box-sizing: border-box;
+}
+
+.watch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 0.62rem;
+  color: #b8a99a;
+  font-weight: 600;
+  padding: 0 2px;
+}
+
+.watch-time {
+  letter-spacing: 0.02em;
+}
+
+.watch-badge-dot {
+  width: 5px;
+  height: 5px;
+  background: #e8a317;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #e8a317;
+}
+
+.watch-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  text-align: center;
+  width: 100%;
+}
+
+.watch-icon {
+  font-size: 1.2rem;
+  color: #f5d078;
+  text-shadow: 0 0 10px rgba(232, 163, 23, 0.6);
+  line-height: 1;
+}
+
+.watch-card-preview {
+  background: rgba(232, 163, 23, 0.12);
+  border: 1px solid rgba(232, 163, 23, 0.35);
+  border-radius: 6px;
+  padding: 3px 5px;
+  width: 100%;
+  font-size: 0.62rem;
+  color: #f5f0ea;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.watch-footer {
+  font-size: 0.58rem;
+  color: #e8a317;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
 .portfolio-info h3 {
   font-size: 1.8rem;
   font-weight: 700;
@@ -1202,6 +1339,9 @@ section { padding: 100px 24px; }
   }
 
   .portfolio-features { justify-content: center; }
+  .portfolio-phone-stage { margin: 0 auto; }
+  .watch-mockup { transform: none; }
+  .watch-mockup:hover { transform: scale(1.05); }
 
   .contact-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
@@ -1241,6 +1381,25 @@ section { padding: 100px 24px; }
     width: 200px;
     height: 400px;
     transform: none;
+  }
+  .watch-mockup {
+    width: 96px;
+    height: 124px;
+    right: -16px;
+    bottom: 12px;
+    border-radius: 22px;
+    padding: 6px;
+  }
+  .watch-screen {
+    border-radius: 16px;
+    padding: 8px 6px;
+  }
+  .watch-card-preview {
+    font-size: 0.55rem;
+    padding: 2px 4px;
+  }
+  .watch-footer {
+    font-size: 0.52rem;
   }
 }
 </style>
@@ -1415,7 +1574,53 @@ section { padding: 100px 24px; }
   <div class="container">
     <div class="section-label">Portfolio</div>
     <h2 class="section-title reveal" data-ko="만든 서비스" data-en="Our Work">만든 서비스</h2>
-    <p class="section-desc reveal" data-ko="실제로 출시하여 운영 중인 서비스입니다." data-en="A live service currently available on the App Store.">실제로 출시하여 운영 중인 서비스입니다.</p>
+    <p class="section-desc reveal" data-ko="실제로 출시하여 운영 중인 서비스입니다." data-en="Live services currently available on the App Store.">실제로 출시하여 운영 중인 서비스입니다.</p>
+    
+    <!-- Lumio (루미오) -->
+    <div class="portfolio-card reveal">
+      <div class="portfolio-phone">
+        <div class="portfolio-phone-stage">
+          <div class="phone-mockup">
+            <div class="phone-screen lumio-screen">
+              <div class="phone-notch"></div>
+              <div class="phone-app-icon">✦</div>
+              <div class="phone-app-name">Lumio</div>
+              <div class="phone-app-desc" data-ko="사진 한 장, 내일의 복습" data-en="One photo, tomorrow's review">사진 한 장, 내일의 복습</div>
+            </div>
+          </div>
+          <!-- Apple Watch Mockup -->
+          <div class="watch-mockup" title="Apple Watch 연동">
+            <div class="watch-crown"></div>
+            <div class="watch-screen">
+              <div class="watch-header">
+                <span class="watch-time">09:41</span>
+                <span class="watch-badge-dot"></span>
+              </div>
+              <div class="watch-body">
+                <span class="watch-icon">✦</span>
+                <div class="watch-card-preview" data-ko="복습할 카드 1장" data-en="1 Card to Review">복습할 카드 1장</div>
+              </div>
+              <div class="watch-footer" data-ko="Apple Watch" data-en="Apple Watch">Apple Watch</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-info">
+        <h3 data-ko="루미오 (Lumio)" data-en="Lumio">루미오 (Lumio)</h3>
+        <div class="app-subtitle" data-ko="AI 기반 플래시카드 & 워치 연동 학습 앱" data-en="AI-Powered Flashcard App with Apple Watch Support">AI 기반 플래시카드 & 워치 연동 학습 앱</div>
+        <p data-ko="노트나 책을 카메라로 찍기만 하면 AI가 핵심 내용을 분석해 플래시카드를 자동으로 생성합니다. 망각곡선 기반의 조용한 복습 알림과 함께, 애플워치(Apple Watch)와 완벽히 연동되어 이동 중에도 손목에서 간편하게 플래시카드를 확인하고 학습을 이어갈 수 있습니다." data-en="Just snap a photo of your notes or textbook, and AI automatically creates key flashcards. Featuring gentle review reminders based on the forgetting curve and seamless Apple Watch integration, you can review flashcards effortlessly right from your wrist on the go.">
+          노트나 책을 카메라로 찍기만 하면 AI가 핵심 내용을 분석해 플래시카드를 자동으로 생성합니다. 망각곡선 기반의 조용한 복습 알림과 함께, 애플워치(Apple Watch)와 완벽히 연동되어 이동 중에도 손목에서 간편하게 플래시카드를 확인하고 학습을 이어갈 수 있습니다.
+        </p>
+        <div class="portfolio-features">
+          <span class="feature-tag" data-ko="📷 카메라 AI 카드 생성" data-en="📷 Camera AI Cards">📷 카메라 AI 카드 생성</span>
+          <span class="feature-tag" data-ko="⌚ 애플워치 연동" data-en="⌚ Apple Watch Sync">⌚ 애플워치 연동</span>
+          <span class="feature-tag">iOS / watchOS</span>
+          <span class="feature-tag">Swift</span>
+          <span class="feature-tag" data-ko="🧠 망각곡선 복습" data-en="🧠 Spaced Repetition">🧠 망각곡선 복습</span>
+        </div>
+        <a href="https://lumioapp.win" target="_blank" class="portfolio-link" data-ko="자세히 보기 →" data-en="Learn More →">자세히 보기 →</a>
+      </div>
+    </div>
     <div class="portfolio-card reveal">
       <div class="portfolio-phone">
         <div class="phone-mockup">
